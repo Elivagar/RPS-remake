@@ -19,7 +19,7 @@ function getHumanChoice() {
     if (userInput === "rock" || userInput === "paper" || userInput === "scissors") {
         return userInput;
     } else {
-        console.log("Perhaps you have a typo? Make sure to write either rock, paper or scissors: ");
+        alert("Perhaps you have a typo? Make sure to write either rock, paper or scissors: ");
         return getHumanChoice();
     }
 }
@@ -30,24 +30,24 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
-    console.log ("Computer chose: " + computerChoice);
+    alert("Computer chose: " + computerChoice);
     if ((humanChoice === "rock" && computerChoice === "scissors") ||
         (humanChoice === "paper" && computerChoice === "rock") ||
         (humanChoice === "scissors" && computerChoice === "paper")) {
             humanScore++;
-            console.log("Round won!");
+            alert("Round won!");
 
     } else if ( (humanChoice === "rock" && computerChoice === "paper") ||
                 (humanChoice === "paper" && computerChoice === "scissors") ||
                 (humanChoice === "scissors" && computerChoice === "rock")) {
                     computerScore++;
-                    console.log("Round lost!");
+                    alert("Round lost!");
 
     } else {
-        console.log("Draw!");
+        alert("Draw!");
     }
 
-    console.log("Current score - You: " + humanScore + ", Computer: " + computerScore);
+    alert("Current score - You: " + humanScore + ", Computer: " + computerScore);
 }
 
 // playRound("rock", "rock");
@@ -60,11 +60,11 @@ function playGame() {
     }
 
     if (humanScore > computerScore) {
-        console.log("Congratulations, you've won!");
+        alert("Congratulations, you've won!");
     } else if (computerScore > humanScore) {
-        console.log("Bummer, better luck next time!");
+        alert("Bummer, better luck next time!");
     } else if (humanScore === computerScore) {
-        console.log("It's a tie! Have another try if you dare.")
+        alert("It's a tie! Have another try if you dare.")
     }
 }
 
