@@ -30,24 +30,21 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
-    alert("Computer chose: " + computerChoice);
     if ((humanChoice === "rock" && computerChoice === "scissors") ||
         (humanChoice === "paper" && computerChoice === "rock") ||
         (humanChoice === "scissors" && computerChoice === "paper")) {
             humanScore++;
-            alert("Round won!");
+            alert("Round won! Computer chose: " + computerChoice);
 
     } else if ( (humanChoice === "rock" && computerChoice === "paper") ||
                 (humanChoice === "paper" && computerChoice === "scissors") ||
                 (humanChoice === "scissors" && computerChoice === "rock")) {
                     computerScore++;
-                    alert("Round lost!");
+                    alert("Round lost! Computer chose: " + computerChoice);
 
     } else {
         alert("Draw!");
     }
-
-    alert("Current score - You: " + humanScore + ", Computer: " + computerScore);
 }
 
 // playRound("rock", "rock");
