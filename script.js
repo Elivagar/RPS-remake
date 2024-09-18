@@ -12,3 +12,14 @@ function getComputerChoice() {
 
 // console.log(getComputerChoice());
 
+function getHumanChoice() {
+    let humanChoice = prompt("Rock, paper or scissors? You know the drill: ");
+    humanChoice = humanChoice.toLowerCase();
+
+    if (humanChoice != ("rock" || "paper" || "scissors")) {
+        console.log("Perhaps you have a typo? Make sure to write either rock, paper or scissors: ");
+        return getHumanChoice();
+    }
+}
+
+// console.log(getHumanChoice());
