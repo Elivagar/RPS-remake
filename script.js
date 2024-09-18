@@ -19,7 +19,7 @@ function getHumanChoice() {
     if (userInput === "rock" || userInput === "paper" || userInput === "scissors") {
         return userInput;
     } else {
-        alert("Perhaps you have a typo? Make sure to write either rock, paper or scissors: ");
+        alert("Perhaps you have a typo?\nMake sure to write either 'rock', 'paper' or 'scissors'.");
         return getHumanChoice();
     }
 }
@@ -34,13 +34,13 @@ function playRound(humanChoice, computerChoice) {
         (humanChoice === "paper" && computerChoice === "rock") ||
         (humanChoice === "scissors" && computerChoice === "paper")) {
             humanScore++;
-            alert("Round won! Computer chose: " + computerChoice);
+            alert("Round won!\nComputer chose: " + computerChoice);
 
     } else if ( (humanChoice === "rock" && computerChoice === "paper") ||
                 (humanChoice === "paper" && computerChoice === "scissors") ||
                 (humanChoice === "scissors" && computerChoice === "rock")) {
                     computerScore++;
-                    alert("Round lost! Computer chose: " + computerChoice);
+                    alert("Round lost!\nComputer chose: " + computerChoice);
 
     } else {
         alert("Draw!");
@@ -57,9 +57,9 @@ function playGame() {
     }
 
     if (humanScore > computerScore) {
-        alert("Congratulations, you've won!");
+        alert("Congratulations, you've won!\nResults - You: " + humanScore + ", Computer: " + computerScore);
     } else if (computerScore > humanScore) {
-        alert("Bummer, better luck next time!");
+        alert("Bummer, better luck next time!\nResults - You: " + humanScore + ", Computer: " + computerScore);
     } else if (humanScore === computerScore) {
         alert("It's a tie! Have another try if you dare.")
     }
