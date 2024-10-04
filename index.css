@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(39, 39, 39);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+button {
+    margin: 20px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(233, 233, 233);
+    font-family: "Avenir";
+    color: rgb(39, 39, 39);
+    font-weight: bold;
+    font-size: 35px;  
+}
+
+#results {
+    color: rgb(233, 233, 233);
+    font-family: "Avenir";
+    font-size: 20px;
+    text-align: center;
+    height: 80px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    margin-top: 40px;
+}
+
+#results.show {
+    visibility: visible;
+}

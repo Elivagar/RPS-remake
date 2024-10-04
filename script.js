@@ -16,6 +16,7 @@ let computerScore = 0;
 function displayResults(message) {
     const results = document.querySelector("#results");
     results.innerHTML = message;
+    results.classList.add("show");
     const currentScore = document.createElement("p");
     currentScore.innerHTML = `<strong>Score</strong><br>You: ${humanScore}<br>Computer: ${computerScore}`;
     results.appendChild(currentScore);
